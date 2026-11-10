@@ -32,3 +32,9 @@ jobs:
           --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
           --api-key "${{ secrets.GITHUB_TOKEN }}" \
            --skip-duplicate
+
+    - name: Upload package to GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: ./nupkg/*.nupkg
+        fail_on_unmatched_files: true
