@@ -4,12 +4,7 @@ namespace SapList;
 
 public class SapList<T> : IList<T>
 {
-    private readonly List<T> _list;
-
-    public SapList()
-    {
-        _list = new List<T>();
-    }
+    private readonly List<T> _list = [];
 
     public SapList(int capacity)
     {
