@@ -6,6 +6,8 @@ public class SapList<T> : IList<T>
 {
     private readonly List<T> _list = [];
 
+    public SapList() {}
+
     public SapList(int capacity)
     {
         _list = new List<T>(capacity);
