@@ -6,9 +6,7 @@ public class SapList<T> : IList<T>
 {
     private readonly List<T> _list = [];
 
-    public SapList() { }
-
-    public SapList(int capacity)
+    public SapList(int capacity = 0)
     {
         _list = new List<T>(capacity);
     }
